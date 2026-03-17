@@ -1,0 +1,119 @@
+en:
+  PLUGIN_SHARE_MARKDOWN_BUTTON:
+    BUTTON_TEXT: "Copy as Markdown"
+    COPIED_TEXT: "Copied!"
+    ADMIN:
+      PLUGIN_STATUS: "Plugin Status"
+      BUTTON_POSITION: "Button Position"
+      BUTTON_POSITION_TOP: "Top of content"
+      BUTTON_POSITION_BOTTOM: "Bottom of content"
+      BUTTON_POSITION_BOTH: "Both top and bottom"
+      BUTTON_TEXT_LABEL: "Button Label"
+      SHOW_ICON: "Show Icon"
+      COPIED_TEXT_LABEL: "Feedback Text (after copy)"
+      INCLUDE_TITLE: "Include Page Title"
+      INCLUDE_TITLE_HELP: "Prepend the page title as # Heading to the copied content"
+      INCLUDE_FRONTMATTER: "Include Frontmatter"
+      INCLUDE_FRONTMATTER_HELP: "Include the page's YAML frontmatter in the copied content"
+      PAGE_TYPES: "Show on Page Types"
+      PAGE_TYPES_HELP: "Leave empty to show on all page types"
+
+es:
+  PLUGIN_SHARE_MARKDOWN_BUTTON:
+    BUTTON_TEXT: "Copiar como Markdown"
+    COPIED_TEXT: "¡Copiado!"
+    ADMIN:
+      PLUGIN_STATUS: "Estado del plugin"
+      BUTTON_POSITION: "Posición del botón"
+      BUTTON_POSITION_TOP: "Arriba del contenido"
+      BUTTON_POSITION_BOTTOM: "Abajo del contenido"
+      BUTTON_POSITION_BOTH: "Arriba y abajo"
+      BUTTON_TEXT_LABEL: "Texto del botón"
+      SHOW_ICON: "Mostrar ícono"
+      COPIED_TEXT_LABEL: "Texto de confirmación (al copiar)"
+      INCLUDE_TITLE: "Incluir título de la página"
+      INCLUDE_TITLE_HELP: "Antepone el título como encabezado # al contenido copiado"
+      INCLUDE_FRONTMATTER: "Incluir Frontmatter"
+      INCLUDE_FRONTMATTER_HELP: "Incluye el frontmatter YAML de la página en el contenido copiado"
+      PAGE_TYPES: "Mostrar en tipos de página"
+      PAGE_TYPES_HELP: "Dejar vacío para mostrar en todos los tipos"
+
+fr:
+  PLUGIN_SHARE_MARKDOWN_BUTTON:
+    BUTTON_TEXT: "Copier en Markdown"
+    COPIED_TEXT: "Copié !"
+    ADMIN:
+      PLUGIN_STATUS: "État du plugin"
+      BUTTON_POSITION: "Position du bouton"
+      BUTTON_POSITION_TOP: "En haut du contenu"
+      BUTTON_POSITION_BOTTOM: "En bas du contenu"
+      BUTTON_POSITION_BOTH: "En haut et en bas"
+      BUTTON_TEXT_LABEL: "Texte du bouton"
+      SHOW_ICON: "Afficher l'icône"
+      COPIED_TEXT_LABEL: "Texte de confirmation (après copie)"
+      INCLUDE_TITLE: "Inclure le titre de la page"
+      INCLUDE_TITLE_HELP: "Ajoute le titre en tant que # Titre au contenu copié"
+      INCLUDE_FRONTMATTER: "Inclure le Frontmatter"
+      INCLUDE_FRONTMATTER_HELP: "Inclut le frontmatter YAML de la page dans le contenu copié"
+      PAGE_TYPES: "Afficher sur les types de pages"
+      PAGE_TYPES_HELP: "Laisser vide pour afficher sur tous les types"
+
+pt:
+  PLUGIN_SHARE_MARKDOWN_BUTTON:
+    BUTTON_TEXT: "Copiar como Markdown"
+    COPIED_TEXT: "Copiado!"
+    ADMIN:
+      PLUGIN_STATUS: "Estado do plugin"
+      BUTTON_POSITION: "Posição do botão"
+      BUTTON_POSITION_TOP: "No topo do conteúdo"
+      BUTTON_POSITION_BOTTOM: "No final do conteúdo"
+      BUTTON_POSITION_BOTH: "No topo e no final"
+      BUTTON_TEXT_LABEL: "Texto do botão"
+      SHOW_ICON: "Mostrar ícone"
+      COPIED_TEXT_LABEL: "Texto de confirmação (após copiar)"
+      INCLUDE_TITLE: "Incluir título da página"
+      INCLUDE_TITLE_HELP: "Adiciona o título como # Título ao conteúdo copiado"
+      INCLUDE_FRONTMATTER: "Incluir Frontmatter"
+      INCLUDE_FRONTMATTER_HELP: "Inclui o frontmatter YAML da página no conteúdo copiado"
+      PAGE_TYPES: "Mostrar nos tipos de página"
+      PAGE_TYPES_HELP: "Deixe vazio para mostrar em todos os tipos"
+
+it:
+  PLUGIN_SHARE_MARKDOWN_BUTTON:
+    BUTTON_TEXT: "Copia in Markdown"
+    COPIED_TEXT: "Copiato!"
+    ADMIN:
+      PLUGIN_STATUS: "Stato del plugin"
+      BUTTON_POSITION: "Posizione del pulsante"
+      BUTTON_POSITION_TOP: "In cima al contenuto"
+      BUTTON_POSITION_BOTTOM: "In fondo al contenuto"
+      BUTTON_POSITION_BOTH: "In cima e in fondo"
+      BUTTON_TEXT_LABEL: "Testo del pulsante"
+      SHOW_ICON: "Mostra icona"
+      COPIED_TEXT_LABEL: "Testo di conferma (dopo la copia)"
+      INCLUDE_TITLE: "Includi titolo della pagina"
+      INCLUDE_TITLE_HELP: "Aggiunge il titolo come # Titolo al contenuto copiato"
+      INCLUDE_FRONTMATTER: "Includi Frontmatter"
+      INCLUDE_FRONTMATTER_HELP: "Include il frontmatter YAML della pagina nel contenuto copiato"
+      PAGE_TYPES: "Mostra sui tipi di pagina"
+      PAGE_TYPES_HELP: "Lasciare vuoto per mostrare su tutti i tipi"
+
+de:
+  PLUGIN_SHARE_MARKDOWN_BUTTON:
+    BUTTON_TEXT: "Als Markdown kopieren"
+    COPIED_TEXT: "Kopiert!"
+    ADMIN:
+      PLUGIN_STATUS: "Plugin-Status"
+      BUTTON_POSITION: "Button-Position"
+      BUTTON_POSITION_TOP: "Oben im Inhalt"
+      BUTTON_POSITION_BOTTOM: "Unten im Inhalt"
+      BUTTON_POSITION_BOTH: "Oben und unten"
+      BUTTON_TEXT_LABEL: "Button-Beschriftung"
+      SHOW_ICON: "Symbol anzeigen"
+      COPIED_TEXT_LABEL: "Bestätigungstext (nach dem Kopieren)"
+      INCLUDE_TITLE: "Seitentitel einbeziehen"
+      INCLUDE_TITLE_HELP: "Fügt den Titel als # Überschrift dem kopierten Inhalt voran"
+      INCLUDE_FRONTMATTER: "Frontmatter einbeziehen"
+      INCLUDE_FRONTMATTER_HELP: "Fügt das YAML-Frontmatter der Seite dem kopierten Inhalt hinzu"
+      PAGE_TYPES: "Bei Seitentypen anzeigen"
+      PAGE_TYPES_HELP: "Leer lassen, um bei allen Typen anzuzeigen"

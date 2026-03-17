@@ -1,0 +1,35 @@
+{# Share Markdown Button partial #}
+{% set smb_id = 'smb-' ~ random(100000, 999999) %}
+{# |t resolves translation keys; if the admin set a plain custom string it is returned as-is #}
+{% set button_text = smb_config.get('button_text', 'PLUGIN_SHARE_MARKDOWN_BUTTON.BUTTON_TEXT')|t %}
+{% set show_icon   = smb_config.get('show_icon', true) %}
+{% set copied_text = smb_config.get('copied_text', 'PLUGIN_SHARE_MARKDOWN_BUTTON.COPIED_TEXT')|t %}
+
+<div class="smb-wrapper">
+    {# Hidden textarea holds the raw Markdown — avoids data-attribute escaping issues #}
+    <textarea
+        id="{{ smb_id }}"
+        class="smb-source"
+        readonly
+        aria-hidden="true"
+        tabindex="-1"
+    >{{ smb_markdown }}</textarea>
+
+    <button
+        type="button"
+        class="smb-button"
+        data-smb-source="{{ smb_id }}"
+        data-smb-copied-text="{{ copied_text | e('html_attr') }}"
+        data-smb-original-text="{{ button_text | e('html_attr') }}"
+        aria-label="{{ button_text | e('html_attr') }}"
+    >
+        {% if show_icon %}
+        <svg class="smb-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+             aria-hidden="true" focusable="false">
+            <path d="M16 1H4C2.9 1 2 1.9 2 3v14h2V3h12V1zm3 4H8C6.9 5 6 5.9 6 7v14
+                     c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/>
+        </svg>
+        {% endif %}
+        <span class="smb-button-text">{{ button_text }}</span>
+    </button>
+</div>

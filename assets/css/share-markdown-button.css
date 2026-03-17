@@ -1,0 +1,78 @@
+/* ============================================================
+   Share Markdown Button — default styles
+   All classes are namespaced with .smb- to avoid collisions
+   ============================================================ */
+
+.smb-wrapper {
+  display: inline-flex;
+  align-items: center;
+  margin: 1rem 0;
+}
+
+/* Hidden textarea that stores the raw Markdown */
+.smb-source {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Button */
+.smb-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4em;
+  padding: 0.45em 0.9em;
+  font-size: 0.875rem;
+  font-family: inherit;
+  font-weight: 500;
+  line-height: 1.4;
+  color: #374151;
+  background-color: #f3f4f6;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  cursor: pointer;
+  transition:
+    background-color 0.15s ease,
+    border-color 0.15s ease,
+    color 0.15s ease,
+    transform 0.1s ease;
+  user-select: none;
+  white-space: nowrap;
+}
+
+.smb-button:hover {
+  background-color: #e5e7eb;
+  border-color: #9ca3af;
+}
+
+.smb-button:active {
+  transform: scale(0.97);
+}
+
+.smb-button:focus-visible {
+  outline: 2px solid #6366f1;
+  outline-offset: 2px;
+}
+
+/* Copied state */
+.smb-button--copied {
+  color: #065f46;
+  background-color: #d1fae5;
+  border-color: #6ee7b7;
+}
+
+/* Icon */
+.smb-icon {
+  width: 1em;
+  height: 1em;
+  flex-shrink: 0;
+  fill: currentColor;
+}

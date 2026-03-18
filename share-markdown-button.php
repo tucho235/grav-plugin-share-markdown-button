@@ -26,18 +26,9 @@ class ShareMarkdownButtonPlugin extends Plugin
         }
 
         $this->enable([
-            'onTwigTemplatePaths'    => ['onTwigTemplatePaths', 0],
             'onPageContentProcessed' => ['onPageContentProcessed', 0],
             'onTwigSiteVariables'    => ['onTwigSiteVariables', 0],
         ]);
-    }
-
-    /**
-     * Add plugin templates directory to Twig paths.
-     */
-    public function onTwigTemplatePaths(): void
-    {
-        $this->grav['twig']->twig_paths[] = __DIR__ . '/templates';
     }
 
     /**
@@ -67,30 +58,22 @@ class ShareMarkdownButtonPlugin extends Plugin
             return;
         }
 
-        $config   = $this->mergeConfig($page);
-        $markdown = $this->buildMarkdown($page, $config);
-
-        $twig       = $this->grav['twig'];
-        $buttonHtml = $twig->processTemplate(
-            'partials/share-markdown-button.html.twig',
-            [
-                'smb_markdown' => $markdown,
-                'smb_config'   => $config,
-            ]
-        );
+        $config     = $this->mergeConfig($page);
+        $markdown   = $this->buildMarkdown($page, $config);
+        $buttonHtml = $this->renderButton($markdown, $config);
 
         $position = $config->get('button_position', 'bottom');
-        $content  = $event['content'];
+        $content  = $page->getRawContent();
 
         switch ($position) {
             case 'top':
-                $event['content'] = $buttonHtml . $content;
+                $page->setRawContent($buttonHtml . $content);
                 break;
             case 'both':
-                $event['content'] = $buttonHtml . $content . $buttonHtml;
+                $page->setRawContent($buttonHtml . $content . $buttonHtml);
                 break;
             default: // bottom
-                $event['content'] = $content . $buttonHtml;
+                $page->setRawContent($content . $buttonHtml);
         }
     }
 
@@ -107,8 +90,19 @@ class ShareMarkdownButtonPlugin extends Plugin
             return false;
         }
 
+        // Skip modular sub-pages — they are rendered as part of a parent page.
+        if ($page->modular()) {
+            return false;
+        }
+
         $config    = $this->mergeConfig($page);
         $pageTypes = (array) $config->get('page_types', []);
+
+        // Flatten in case the admin stored nested arrays, keep only scalar values.
+        $pageTypes = array_values(array_filter(array_map(
+            fn($v) => is_array($v) ? (string) reset($v) : (string) $v,
+            $pageTypes
+        )));
 
         // Empty list means "all types".
         if (!empty($pageTypes) && !in_array($page->template(), $pageTypes, true)) {
@@ -161,5 +155,51 @@ class ShareMarkdownButtonPlugin extends Plugin
         }
 
         return $raw;
+    }
+
+    /**
+     * Render the button HTML directly in PHP.
+     *
+     * Avoids calling processTemplate() during onPageContentProcessed, which
+     * fires before Twig is fully initialised and causes silent rendering failures.
+     * Translation keys are resolved via the Language service instead of |t.
+     */
+    private function renderButton(string $markdown, $config): string
+    {
+        $id       = 'smb-' . rand(100000, 999999);
+        $lang     = $this->grav['language'];
+        $showIcon = (bool) $config->get('show_icon', true);
+
+        $buttonText = $config->get('button_text', 'PLUGIN_SHARE_MARKDOWN_BUTTON.BUTTON_TEXT');
+        $copiedText = $config->get('copied_text', 'PLUGIN_SHARE_MARKDOWN_BUTTON.COPIED_TEXT');
+
+        // Resolve translation keys; plain custom strings are returned as-is.
+        $buttonText = $lang->translate([$buttonText]) ?: $buttonText;
+        $copiedText = $lang->translate([$copiedText]) ?: $copiedText;
+
+        $icon = '';
+        if ($showIcon) {
+            $icon = '<svg class="smb-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">'
+                  . '<path d="M16 1H4C2.9 1 2 1.9 2 3v14h2V3h12V1zm3 4H8C6.9 5 6 5.9 6 7v14'
+                  . 'c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/>'
+                  . '</svg>';
+        }
+
+        $eid         = htmlspecialchars($id, ENT_QUOTES | ENT_HTML5, 'UTF-8');
+        $eMarkdown   = htmlspecialchars($markdown, ENT_NOQUOTES | ENT_HTML5, 'UTF-8');
+        $eButtonText = htmlspecialchars($buttonText, ENT_QUOTES | ENT_HTML5, 'UTF-8');
+        $eCopiedText = htmlspecialchars($copiedText, ENT_QUOTES | ENT_HTML5, 'UTF-8');
+
+        return '<div class="smb-wrapper">'
+             . '<textarea id="' . $eid . '" class="smb-source" readonly aria-hidden="true" tabindex="-1">' . $eMarkdown . '</textarea>'
+             . '<button type="button" class="smb-button"'
+             . ' data-smb-source="' . $eid . '"'
+             . ' data-smb-copied-text="' . $eCopiedText . '"'
+             . ' data-smb-original-text="' . $eButtonText . '"'
+             . ' aria-label="' . $eButtonText . '">'
+             . $icon
+             . '<span class="smb-button-text">' . $eButtonText . '</span>'
+             . '</button>'
+             . '</div>';
     }
 }

@@ -52,7 +52,15 @@ class ShareMarkdownButtonPlugin extends Plugin
      */
     public function onPageContentProcessed(Event $event): void
     {
-        $page = $event['page'];
+        $page        = $event['page'];
+        $currentPage = $this->grav['page'];
+
+        // onPageContentProcessed fires for every page Grav processes
+        // (collection items, modular sub-pages, etc.). Only inject on the
+        // page that is actually being routed and displayed.
+        if (!$page || !$currentPage || $page->route() !== $currentPage->route()) {
+            return;
+        }
 
         if (!$this->shouldShowButton($page)) {
             return;

@@ -4,9 +4,9 @@ description: Adds a button to copy the page content as Markdown to the clipboard
 icon: clipboard
 author:
   name: tucho235
-homepage: https://github.com/tucho235/grav-plugin-share-markdown-button
+homepage: https://github.com/tucho235/grav-plugin-copy-as-markdown-button
 keywords: markdown, clipboard, share, copy, button
-bugs: https://github.com/tucho235/grav-plugin-share-markdown-button/issues
+bugs: https://github.com/tucho235/grav-plugin-copy-as-markdown-button/issues
 license: MIT
 
 form:

@@ -1,5 +1,5 @@
 en:
-  PLUGIN_SHARE_MARKDOWN_BUTTON:
+  PLUGIN_COPY_AS_MARKDOWN_BUTTON:
     BUTTON_TEXT: "Copy as Markdown"
     COPIED_TEXT: "Copied!"
     ADMIN:
@@ -19,7 +19,7 @@ en:
       PAGE_TYPES_HELP: "Leave empty to show on all page types"
 
 es:
-  PLUGIN_SHARE_MARKDOWN_BUTTON:
+  PLUGIN_COPY_AS_MARKDOWN_BUTTON:
     BUTTON_TEXT: "Copiar como Markdown"
     COPIED_TEXT: "¡Copiado!"
     ADMIN:
@@ -39,7 +39,7 @@ es:
       PAGE_TYPES_HELP: "Dejar vacío para mostrar en todos los tipos"
 
 fr:
-  PLUGIN_SHARE_MARKDOWN_BUTTON:
+  PLUGIN_COPY_AS_MARKDOWN_BUTTON:
     BUTTON_TEXT: "Copier en Markdown"
     COPIED_TEXT: "Copié !"
     ADMIN:
@@ -59,7 +59,7 @@ fr:
       PAGE_TYPES_HELP: "Laisser vide pour afficher sur tous les types"
 
 pt:
-  PLUGIN_SHARE_MARKDOWN_BUTTON:
+  PLUGIN_COPY_AS_MARKDOWN_BUTTON:
     BUTTON_TEXT: "Copiar como Markdown"
     COPIED_TEXT: "Copiado!"
     ADMIN:
@@ -79,7 +79,7 @@ pt:
       PAGE_TYPES_HELP: "Deixe vazio para mostrar em todos os tipos"
 
 it:
-  PLUGIN_SHARE_MARKDOWN_BUTTON:
+  PLUGIN_COPY_AS_MARKDOWN_BUTTON:
     BUTTON_TEXT: "Copia in Markdown"
     COPIED_TEXT: "Copiato!"
     ADMIN:
@@ -99,7 +99,7 @@ it:
       PAGE_TYPES_HELP: "Lasciare vuoto per mostrare su tutti i tipi"
 
 de:
-  PLUGIN_SHARE_MARKDOWN_BUTTON:
+  PLUGIN_COPY_AS_MARKDOWN_BUTTON:
     BUTTON_TEXT: "Als Markdown kopieren"
     COPIED_TEXT: "Kopiert!"
     ADMIN:

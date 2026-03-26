@@ -1,4 +1,4 @@
-name: Share Markdown Button
+name: Copy as Markdown Button
 version: 1.0.0
 description: Adds a button to copy the page content as Markdown to the clipboard
 icon: clipboard
@@ -14,7 +14,7 @@ form:
   fields:
     enabled:
       type: toggle
-      label: PLUGIN_SHARE_MARKDOWN_BUTTON.ADMIN.PLUGIN_STATUS
+      label: PLUGIN_COPY_AS_MARKDOWN_BUTTON.ADMIN.PLUGIN_STATUS
       highlight: 1
       default: 0
       options:
@@ -25,22 +25,22 @@ form:
 
     button_position:
       type: select
-      label: PLUGIN_SHARE_MARKDOWN_BUTTON.ADMIN.BUTTON_POSITION
+      label: PLUGIN_COPY_AS_MARKDOWN_BUTTON.ADMIN.BUTTON_POSITION
       default: bottom
       options:
-        top: PLUGIN_SHARE_MARKDOWN_BUTTON.ADMIN.BUTTON_POSITION_TOP
-        bottom: PLUGIN_SHARE_MARKDOWN_BUTTON.ADMIN.BUTTON_POSITION_BOTTOM
-        both: PLUGIN_SHARE_MARKDOWN_BUTTON.ADMIN.BUTTON_POSITION_BOTH
+        top: PLUGIN_COPY_AS_MARKDOWN_BUTTON.ADMIN.BUTTON_POSITION_TOP
+        bottom: PLUGIN_COPY_AS_MARKDOWN_BUTTON.ADMIN.BUTTON_POSITION_BOTTOM
+        both: PLUGIN_COPY_AS_MARKDOWN_BUTTON.ADMIN.BUTTON_POSITION_BOTH
 
     button_text:
       type: text
-      label: PLUGIN_SHARE_MARKDOWN_BUTTON.ADMIN.BUTTON_TEXT_LABEL
-      default: "PLUGIN_SHARE_MARKDOWN_BUTTON.BUTTON_TEXT"
-      placeholder: "PLUGIN_SHARE_MARKDOWN_BUTTON.BUTTON_TEXT"
+      label: PLUGIN_COPY_AS_MARKDOWN_BUTTON.ADMIN.BUTTON_TEXT_LABEL
+      default: "PLUGIN_COPY_AS_MARKDOWN_BUTTON.BUTTON_TEXT"
+      placeholder: "PLUGIN_COPY_AS_MARKDOWN_BUTTON.BUTTON_TEXT"
 
     show_icon:
       type: toggle
-      label: PLUGIN_SHARE_MARKDOWN_BUTTON.ADMIN.SHOW_ICON
+      label: PLUGIN_COPY_AS_MARKDOWN_BUTTON.ADMIN.SHOW_ICON
       highlight: 1
       default: 1
       options:
@@ -51,14 +51,14 @@ form:
 
     copied_text:
       type: text
-      label: PLUGIN_SHARE_MARKDOWN_BUTTON.ADMIN.COPIED_TEXT_LABEL
-      default: "PLUGIN_SHARE_MARKDOWN_BUTTON.COPIED_TEXT"
-      placeholder: "PLUGIN_SHARE_MARKDOWN_BUTTON.COPIED_TEXT"
+      label: PLUGIN_COPY_AS_MARKDOWN_BUTTON.ADMIN.COPIED_TEXT_LABEL
+      default: "PLUGIN_COPY_AS_MARKDOWN_BUTTON.COPIED_TEXT"
+      placeholder: "PLUGIN_COPY_AS_MARKDOWN_BUTTON.COPIED_TEXT"
 
     include_title:
       type: toggle
-      label: PLUGIN_SHARE_MARKDOWN_BUTTON.ADMIN.INCLUDE_TITLE
-      help: PLUGIN_SHARE_MARKDOWN_BUTTON.ADMIN.INCLUDE_TITLE_HELP
+      label: PLUGIN_COPY_AS_MARKDOWN_BUTTON.ADMIN.INCLUDE_TITLE
+      help: PLUGIN_COPY_AS_MARKDOWN_BUTTON.ADMIN.INCLUDE_TITLE_HELP
       highlight: 1
       default: 1
       options:
@@ -69,8 +69,8 @@ form:
 
     include_frontmatter:
       type: toggle
-      label: PLUGIN_SHARE_MARKDOWN_BUTTON.ADMIN.INCLUDE_FRONTMATTER
-      help: PLUGIN_SHARE_MARKDOWN_BUTTON.ADMIN.INCLUDE_FRONTMATTER_HELP
+      label: PLUGIN_COPY_AS_MARKDOWN_BUTTON.ADMIN.INCLUDE_FRONTMATTER
+      help: PLUGIN_COPY_AS_MARKDOWN_BUTTON.ADMIN.INCLUDE_FRONTMATTER_HELP
       highlight: 0
       default: 0
       options:
@@ -81,8 +81,8 @@ form:
 
     page_types:
       type: array
-      label: PLUGIN_SHARE_MARKDOWN_BUTTON.ADMIN.PAGE_TYPES
-      help: PLUGIN_SHARE_MARKDOWN_BUTTON.ADMIN.PAGE_TYPES_HELP
+      label: PLUGIN_COPY_AS_MARKDOWN_BUTTON.ADMIN.PAGE_TYPES
+      help: PLUGIN_COPY_AS_MARKDOWN_BUTTON.ADMIN.PAGE_TYPES_HELP
       default:
         - default
         - post

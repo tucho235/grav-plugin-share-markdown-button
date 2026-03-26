@@ -4,7 +4,7 @@ namespace Grav\Plugin;
 use Grav\Common\Plugin;
 use RocketTheme\Toolbox\Event\Event;
 
-class ShareMarkdownButtonPlugin extends Plugin
+class CopyAsMarkdownButtonPlugin extends Plugin
 {
     /**
      * @return array
@@ -43,8 +43,8 @@ class ShareMarkdownButtonPlugin extends Plugin
         }
 
         $assets = $this->grav['assets'];
-        $assets->addCss('plugin://share-markdown-button/assets/css/share-markdown-button.css');
-        $assets->addJs('plugin://share-markdown-button/assets/js/share-markdown-button.js', ['defer' => true]);
+        $assets->addCss('plugin://copy-as-markdown-button/assets/css/copy-as-markdown-button.css');
+        $assets->addJs('plugin://copy-as-markdown-button/assets/js/copy-as-markdown-button.js', ['defer' => true]);
     }
 
     /**
@@ -178,8 +178,8 @@ class ShareMarkdownButtonPlugin extends Plugin
         $lang     = $this->grav['language'];
         $showIcon = (bool) $config->get('show_icon', true);
 
-        $buttonText = $config->get('button_text', 'PLUGIN_SHARE_MARKDOWN_BUTTON.BUTTON_TEXT');
-        $copiedText = $config->get('copied_text', 'PLUGIN_SHARE_MARKDOWN_BUTTON.COPIED_TEXT');
+        $buttonText = $config->get('button_text', 'PLUGIN_COPY_AS_MARKDOWN_BUTTON.BUTTON_TEXT');
+        $copiedText = $config->get('copied_text', 'PLUGIN_COPY_AS_MARKDOWN_BUTTON.COPIED_TEXT');
 
         // Resolve translation keys; plain custom strings are returned as-is.
         $buttonText = $lang->translate([$buttonText]) ?: $buttonText;

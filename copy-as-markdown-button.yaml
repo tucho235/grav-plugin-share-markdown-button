@@ -1,8 +1,8 @@
 enabled: true
 button_position: bottom    # top | bottom | both
-button_text: "PLUGIN_SHARE_MARKDOWN_BUTTON.BUTTON_TEXT"
+button_text: "PLUGIN_COPY_AS_MARKDOWN_BUTTON.BUTTON_TEXT"
 show_icon: true
-copied_text: "PLUGIN_SHARE_MARKDOWN_BUTTON.COPIED_TEXT"
+copied_text: "PLUGIN_COPY_AS_MARKDOWN_BUTTON.COPIED_TEXT"
 include_title: true        # prepend "# Page Title" to the copied content
 include_frontmatter: false
 page_types: []             # empty = all types; e.g. [default, post]

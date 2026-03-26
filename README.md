@@ -1,6 +1,6 @@
-# Grav Plugin — Share Markdown Button
+# Grav Plugin — Copy as Markdown Button
 
-**Share Markdown Button** adds a one-click button to your [Grav](https://getgrav.org) pages that copies the page content as clean Markdown to the visitor's clipboard — ready to paste into an AI chat, a note-taking app, or any Markdown editor.
+**Copy as Markdown Button** adds a one-click button to your [Grav](https://getgrav.org) pages that copies the page content as clean Markdown to the visitor's clipboard — ready to paste into an AI chat, a note-taking app, or any Markdown editor.
 
 Because Grav stores content as `.md` files natively, there is no lossy HTML-to-Markdown conversion: what gets copied is the actual source of the page.
 
@@ -33,21 +33,21 @@ Because Grav stores content as `.md` files natively, there is no lossy HTML-to-M
 ### Via GPM (recommended)
 
 ```bash
-bin/gpm install share-markdown-button
+bin/gpm install copy-as-markdown-button
 ```
 
 ### Manual
 
 1. Download or clone this repository.
-2. Place the folder under `user/plugins/` and rename it to `share-markdown-button`.
-3. The final path must be `user/plugins/share-markdown-button/share-markdown-button.php`.
+2. Place the folder under `user/plugins/` and rename it to `copy-as-markdown-button`.
+3. The final path must be `user/plugins/copy-as-markdown-button/copy-as-markdown-button.php`.
 
 ---
 
 ## Configuration
 
-The plugin works out-of-the-box. To customize, copy `share-markdown-button.yaml` to
-`user/config/plugins/share-markdown-button.yaml` and edit it:
+The plugin works out-of-the-box. To customize, copy `copy-as-markdown-button.yaml` to
+`user/config/plugins/copy-as-markdown-button.yaml` and edit it:
 
 ```yaml
 enabled: true
@@ -140,7 +140,7 @@ All CSS classes are prefixed with `.smb-` to avoid theme conflicts. Override any
 
 ## Contributing
 
-Bug reports and pull requests are welcome on the [GitHub repository](https://github.com/tucho235/grav-plugin-share-markdown-button).
+Bug reports and pull requests are welcome on the [GitHub repository](https://github.com/tucho235/grav-plugin-copy-as-markdown-button).
 
 ---
 
